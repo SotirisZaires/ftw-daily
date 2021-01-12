@@ -35,6 +35,24 @@
 
 export const filters = [
   {
+    id: 'category',
+    label: 'Category',
+    type: 'SelectSingleFilter',
+    group: 'primary',
+    queryParamNames: ['pub_category'],
+    config: {
+      // "key" is the option you see in Flex Console.
+      // "label" is set here for the UI only.
+      // Note: label is not added through the translation files
+      // to make filter customizations a bit easier.
+      options: [
+        { key: 'dresses', label: 'Dresses' },
+        { key: 'bags', label: 'Bags' },
+        { key: 'other', label: 'Other' },
+      ],
+    },
+  },
+  {
     id: 'dates',
     label: 'Dates',
     type: 'BookingDateRangeFilter',
@@ -55,8 +73,8 @@ export const filters = [
     // Price filter configuration
     // Note: unlike most prices this is not handled in subunits
     config: {
-      min: 0,
-      max: 1000,
+      min: 5,
+      max: 500,
       step: 5,
     },
   },
@@ -74,29 +92,10 @@ export const filters = [
     config: {},
   },
   {
-    id: 'category',
-    label: 'Category',
-    type: 'SelectSingleFilter',
-    group: 'secondary',
-    queryParamNames: ['pub_category'],
-    config: {
-      // "key" is the option you see in Flex Console.
-      // "label" is set here for the UI only.
-      // Note: label is not added through the translation files
-      // to make filter customizations a bit easier.
-      options: [
-        { key: 'smoke', label: 'Smoke' },
-        { key: 'electric', label: 'Electric' },
-        { key: 'wood', label: 'Wood' },
-        { key: 'other', label: 'Other' },
-      ],
-    },
-  },
-  {
     id: 'amenities',
     label: 'Amenities',
     type: 'SelectMultipleFilter',
-    group: 'secondary',
+    group: 'primary',
     queryParamNames: ['pub_amenities'],
     config: {
       // Optional modes: 'has_all', 'has_any'
