@@ -78,6 +78,7 @@ export const ListingCardComponent = props => {
             alt={title}
             image={firstImage}
             variants={['landscape-crop', 'landscape-crop2x']}
+           //variants={['portrait-crop', 'portrait-crop2x']}
             sizes={renderSizes}
           />
         </div>

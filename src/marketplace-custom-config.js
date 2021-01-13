@@ -53,14 +53,78 @@ export const filters = [
     },
   },
   {
-    id: 'dates',
-    label: 'Dates',
-    type: 'BookingDateRangeFilter',
+    id: 'amenities',
+    label: 'Size',
+    type: 'SelectMultipleFilter',
     group: 'primary',
-    // Note: BookingDateRangeFilter is fixed filter,
-    // you can't change "queryParamNames: ['dates'],"
-    queryParamNames: ['dates'],
-    config: {},
+    queryParamNames: ['pub_amenities'],
+    config: {
+      // Optional modes: 'has_all', 'has_any'
+      // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
+      searchMode: 'has_all',
+
+      // "key" is the option you see in Flex Console.
+      // "label" is set here for this web app's UI only.
+      // Note: label is not added through the translation files
+      // to make filter customizations a bit easier.
+      options: [
+        {
+          key: 'xxsmall',
+          label: 'XXS',
+        },
+        {
+          key: 'xsmall',
+          label: 'XS',
+        },
+        {
+          key: 'small',
+          label: 'S',
+        },
+        {
+          key: 'medium',
+          label: 'M',
+        },
+        {
+          key: 'large',
+          label: 'L',
+        },
+        {
+          key: 'xlarge',
+          label: 'XL',
+        },
+        {
+          key: 'xxlarge',
+          label: 'XXL',
+        },
+        {
+          key: 'onesize',
+          label: 'One Size',
+        },
+      ],
+    },
+  },
+  {
+    id: 'view',
+    label: 'Color',
+    type: 'SelectMultipleFilter',
+    group: 'primary',
+    queryParamNames: ['pub_view'],
+    config: {
+      options: [
+        { key: 'black', label: 'Black' },
+        { key: 'blue', label: 'Blue' },
+        { key: 'green', label: 'Green' },
+        { key: 'white', label: 'White' },
+        { key: 'red', label: 'Red' },
+        { key: 'brown', label: 'Brown' },
+        { key: 'gold', label: 'Gold' },
+        { key: 'pink', label: 'Pink' },
+        { key: 'yellow', label: 'Yellow' },
+        { key: 'orange', label: 'Orange' },
+        { key: 'multi', label: 'Multi-color' },
+        { key: 'other', label: 'Other' },
+      ],
+    },
   },
   {
     id: 'price',
@@ -79,6 +143,16 @@ export const filters = [
     },
   },
   {
+    id: 'dates',
+    label: 'Dates',
+    type: 'BookingDateRangeFilter',
+    group: 'primary',
+    // Note: BookingDateRangeFilter is fixed filter,
+    // you can't change "queryParamNames: ['dates'],"
+    queryParamNames: ['dates'],
+    config: {},
+  },
+  {
     id: 'keyword',
     label: 'Keyword',
     type: 'KeywordFilter',
@@ -90,57 +164,6 @@ export const filters = [
     // the keyword search can't be used at the same time.
     // You can turn on/off ordering by distance from config.js file.
     config: {},
-  },
-  {
-    id: 'amenities',
-    label: 'Amenities',
-    type: 'SelectMultipleFilter',
-    group: 'primary',
-    queryParamNames: ['pub_amenities'],
-    config: {
-      // Optional modes: 'has_all', 'has_any'
-      // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
-      searchMode: 'has_all',
-
-      // "key" is the option you see in Flex Console.
-      // "label" is set here for this web app's UI only.
-      // Note: label is not added through the translation files
-      // to make filter customizations a bit easier.
-      options: [
-        {
-          key: 'towels',
-          label: 'Towels',
-        },
-        {
-          key: 'bathroom',
-          label: 'Bathroom',
-        },
-        {
-          key: 'swimming_pool',
-          label: 'Swimming pool',
-        },
-        {
-          key: 'own_drinks',
-          label: 'Own drinks allowed',
-        },
-        {
-          key: 'jacuzzi',
-          label: 'Jacuzzi',
-        },
-        {
-          key: 'audiovisual_entertainment',
-          label: 'Audiovisual entertainment',
-        },
-        {
-          key: 'barbeque',
-          label: 'Barbeque',
-        },
-        {
-          key: 'own_food_allowed',
-          label: 'Own food allowed',
-        },
-      ],
-    },
   },
 ];
 

@@ -52,6 +52,7 @@ import SectionAvatar from './SectionAvatar';
 import SectionHeading from './SectionHeading';
 import SectionDescriptionMaybe from './SectionDescriptionMaybe';
 import SectionFeaturesMaybe from './SectionFeaturesMaybe';
+import SectionViewMaybe from './SectionViewMaybe';
 import SectionReviews from './SectionReviews';
 import SectionHostMaybe from './SectionHostMaybe';
 import SectionRulesMaybe from './SectionRulesMaybe';
@@ -382,6 +383,7 @@ export class ListingPageComponent extends Component {
     );
 
     const amenityOptions = findOptionsForSelectFilter('amenities', filterConfig);
+    const viewOptions = findOptionsForSelectFilter('view', filterConfig);
     const categoryOptions = findOptionsForSelectFilter('category', filterConfig);
     const category =
       publicData && publicData.category ? (
@@ -441,6 +443,7 @@ export class ListingPageComponent extends Component {
                   />
                   <SectionDescriptionMaybe description={description} />
                   <SectionFeaturesMaybe options={amenityOptions} publicData={publicData} />
+                  <SectionViewMaybe options={viewOptions} publicData={publicData} />
                   <SectionRulesMaybe publicData={publicData} />
                   <SectionMapMaybe
                     geolocation={geolocation}

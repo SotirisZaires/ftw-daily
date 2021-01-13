@@ -1,3 +1,4 @@
+//import { util as sdkUtil } from '../../util/sdkLoader'; //add for portait
 import React, { Component } from 'react';
 import { array, bool, func, oneOf, object, shape, string } from 'prop-types';
 import { injectIntl, intlShape } from '../../util/reactIntl';
@@ -328,6 +329,18 @@ SearchPage.loadData = (params, search) => {
     'fields.listing': ['title', 'geolocation', 'price'],
     'fields.user': ['profile.displayName', 'profile.abbreviatedName'],
     'fields.image': ['variants.landscape-crop', 'variants.landscape-crop2x'],
+    /*add for portrait
+    'fields.image': ['variants.portrait-crop', 'variants.portrait-crop2x'],
+    'imageVariant.portrait-crop': sdkUtil.objectQueryString({
+      w: 400,
+      h: 600,    
+      fit: 'crop',
+    }),
+    'imageVariant.portrait-crop2x': sdkUtil.objectQueryString({
+      w: 800,
+      h: 1200,
+      fit: 'crop',
+    }),*/
     'limit.images': 1,
   });
 };

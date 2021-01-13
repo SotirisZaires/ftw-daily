@@ -96,10 +96,10 @@ const siteTitle = 'Wardrobly';
 const siteTwitterHandle = '@wardrobly';
 
 // Instagram page is used in SEO schema (http://schema.org/Organization)
-const siteInstagramPage = null;
+const siteInstagramPage = 'https://www.instagram.com/wardrobly/';
 
 // Facebook page is used in SEO schema (http://schema.org/Organization)
-const siteFacebookPage = 'https://www.facebook.com/Sharetribe/';
+const siteFacebookPage = 'https://www.facebook.com/wardrobly/';
 
 // Social logins & SSO
 
