@@ -18,7 +18,7 @@ const FAQPage = () => {
         schema={{
             "@context": "http://schema.org",
             "@type": "FAQPage",
-            "description": "Frequently asked questions in CottageDays marketplace.",
+            "description": "Frequently asked questions in Wardrobly marketplace.",
             "name": "Frequently Asked Questions",
             "mainEntity": [
             {

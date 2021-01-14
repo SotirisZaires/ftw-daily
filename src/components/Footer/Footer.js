@@ -81,10 +81,8 @@ const Footer = props => {
             </div>
             <div className={css.infoLinks}>
               <ul className={css.list}>
-                <li className={css.listItem}>
-                  <NamedLink name="NewListingPage" className={css.link}>
-                    <FormattedMessage id="Footer.toNewListingPage" />
-                  </NamedLink>
+                <li className={css.listTitle}>
+                  Wardrobly
                 </li>
                 <li className={css.listItem}>
                   <NamedLink name="AboutPage" className={css.link}>
@@ -101,25 +99,21 @@ const Footer = props => {
                     <FormattedMessage id="Footer.toHelpPage" />
                   </NamedLink>
                 </li>
-                <li className={css.listItem}>
-                  <NamedLink name="AboutPage" to={{ hash: '#contact' }} className={css.link}>
-                    <FormattedMessage id="Footer.toContactPage" />
-                  </NamedLink>
-                </li>
               </ul>
             </div>
-            <div className={css.searches}>
+            <div className={css.infoLinks}>
               <ul className={css.list}>
+                <li className={css.listTitle}>
+                  Community
+                </li>
                 <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Athens%2C%20Greece&bounds=42.024343%2C27.793698%2C34.406387%2C20.081295&origin=37.98393%2C23.73542',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchAthens" />
+                  <NamedLink name="LandingPage" className={css.link}>
+                    <FormattedMessage id="Footer.toBlogPage" />
+                  </NamedLink>
+                </li>
+                <li className={css.listItem}>
+                  <NamedLink name="ContactPage" className={css.link}>
+                    <FormattedMessage id="Footer.toContactPage" />
                   </NamedLink>
                 </li>
               </ul>
