@@ -45,7 +45,7 @@ const bookingProcessAlias = 'preauth-nightly-booking/release-1';
 //
 // Note 2: Translations will use different translation keys for night, day or unit
 //         depending on the value chosen.
-const bookingUnitType = 'line-item/night';
+const bookingUnitType = 'line-item/unit';
 //const bookingUnitType = 'line-item/day';
 // Should the application fetch available time slots (currently defined as
 // start and end dates) to be shown on listing page.
@@ -127,7 +127,7 @@ const maps = {
 
     // Distance in meters for calculating the bounding box around the
     // current location.
-    currentLocationBoundsDistance: 1000,
+    currentLocationBoundsDistance: 5000,
 
     // Example location can be edited in the
     // `default-location-searches.js` file.
@@ -147,7 +147,7 @@ const maps = {
   // coordinates are still accessible in the HTTP requests and the
   // Redux store.
   fuzzy: {
-    enabled: false,
+    enabled: true,
 
     // Amount of maximum offset in meters that is applied to obfuscate
     // the original coordinates. The actual value is random, but the
